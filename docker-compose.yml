@@ -12,6 +12,6 @@ bundle:
   # 'image' will vary depending on your docker-compose 
   # project name. You may need to run `docker-compose build web`
   # before this works.
-  image: tededqa_web
+  image: {project_name}_web
   volumes:
     - /bundle
