@@ -1,0 +1,17 @@
+web:
+  build: .
+  volumes:
+    - .:/app
+  # This tells the web container to mount the `bundle` images'
+  # /bundle volume to the `web` containers /bundle path.
+  volumes_from:
+    - bundle
+
+# --- Add this to your fig.yml or docker-compose.yml file ---
+bundle:
+  # 'image' will vary depending on your docker-compose 
+  # project name. You may need to run `docker-compose build web`
+  # before this works.
+  image: tededqa_web
+  volumes:
+    - /bundle
