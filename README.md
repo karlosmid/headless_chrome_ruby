@@ -15,6 +15,6 @@ Start `docker terminal`, cd to ui automation project folder.
 
 Run `docker-compose build --force-rm`
 
-Run your tests: `docker-compose run web cucumber -f html -o chrome.html features/feature_name.feature`
+Run your tests: `docker-compose run web /bundle/bin/cucumber -f html -o chrome.html features/feature_name.feature`
 
 `chrome.html` file is created in your development machine!
